@@ -10,29 +10,33 @@ body {
 
 /* Header */
 
+header {
+  width: 100%;
+  background-color: black;
+}
 .nav {
   display: flex;
   background-color: black;
   color: white;
   justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .nav_list {
   display: flex;
   justify-content: space-between;
-  width: 31.25rem;
-  margin-right: 6.25rem;
+  width: 40rem;
   align-items: center;
 }
 
 .nav_list li {
   list-style: none;
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 .nav h1 {
-  margin-left: 6.25rem;
-  font-size: 2.25rem;
+  font-size: 4rem;
 }
 
 .active {
@@ -44,4 +48,81 @@ body {
 a {
   color: white;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .nav_list {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .nav_list {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    font-size: 200%;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .nav h1 {
+    font-size: 300%;
+    transition: 0.5s ease-in-out;
+    margin: auto 0;
+  }
+}
+
+/* Mission */
+
+.mission-description {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.miss-desc {
+  width: 45%;
+  text-align: center;
+  margin: 25px 0;
+  font-size: 1.5rem;
+}
+
+.image {
+  width: 27%;
+  margin: auto 0;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mission h2 {
+  font-size: 3rem;
+}
+
+.description h3 {
+  font-size: 2.5rem;
+}
+
+
+@media screen and (max-width: 1030px) {
+  .mission-description {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .image {
+    width: 45%;
+    transition: 0.25s;
+    margin: 20px auto;
+  }
+
+  .miss-desc {
+    width: 90%;
+    margin: -20px auto 0;
+
+  }
 }
